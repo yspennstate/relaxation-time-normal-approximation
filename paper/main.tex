@@ -1,0 +1,185 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\cov}{cov}
+
+\hypersetup{pdftitle={The relaxation time does not control the normal approximation of stationary additive functionals},pdfauthor={Yitzchak Shmalo}}
+
+\title[Relaxation time and normal approximation]{The relaxation time does not control the normal approximation of stationary additive functionals}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{13 October 2026}
+\subjclass[2020]{60J27, 60F05}
+\keywords{Reversible Markov chain, relaxation time, additive functional, central limit theorem, Berry--Esseen bound}
+
+\begin{document}
+\begin{abstract}
+Let $X$ be a finite irreducible reversible Markov chain in continuous time with relaxation time $\tau_2$, started from its stationary distribution, and let $g$ be a function on its states with mean $0$ and variance $1$ under that distribution. Aldous and Fill asked whether the Kolmogorov distance between $\int_0^tg(X_u)\,du/(\sigma t^{1/2})$, where $\sigma^2$ is the asymptotic variance rate, and the standard normal law is bounded by a function of $\max|g|$ and $t/\tau_2$ alone that tends to $0$ as $t/\tau_2\to\infty$. It is not. For every $b\ge1$ and $s\ge2b$ there are a chain on four states with $\tau_2=1$ and a function $g$ of mean $0$ and variance $1$ with $\max|g|=b$ such that $\int_0^sg(X_u)\,du\le0$ with probability at least $1-4/s$, so at $t=s$ the distance is at least $1/2-4/s$ whatever positive constant the integral is divided by.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $X$ be an irreducible Markov chain in continuous time on a finite set $I$, with generator $Q=(q_{ij})$ and stationary distribution $\pi$, and assume that $X$ is reversible: $\pi_iq_{ij}=\pi_jq_{ji}$ for all $i,j$. Let $0=\lambda_1<\lambda_2\le\dots$ be the eigenvalues of $-Q$, and let $\tau_2=1/\lambda_2$ be the relaxation time. Write $\Pp_\pi$ for the chain started from $\pi$, $\pi(h)=\sum_i\pi_ih(i)$ and $\|g\|_\infty=\max_i|g(i)|$. A function $g\colon I\to\mathbb R$ is \emph{standardized} if $\pi(g)=0$ and $\pi(g^2)=1$, and for such $g$ we put
+\[
+S_t=\int_0^tg(X_u)\,du .
+\]
+By Proposition~4.29 of Aldous and Fill \cite{AF}, the limit $\sigma^2=\lim_{t\to\infty}t^{-1}\var_\pi S_t$ exists, $0<\sigma^2\le2\tau_2$, and
+\[
+A(t/\tau_2)\,t\sigma^2\le\var_\pi S_t\le t\sigma^2,\qquad A(u)=1-u^{-1}(1-e^{-u}),
+\]
+so the variance of $S_t$ approaches $t\sigma^2$ at a rate that depends on the chain only through $t/\tau_2$. The law of $S_t/(\sigma t^{1/2})$ under $\Pp_\pi$ tends to the standard normal law, and the Kolmogorov distance is at most $Kt^{-1/2}$ for $t\ge1$, with a constant $K$ that depends on the chain \cite[Proposition~4.51]{AF}. Aldous and Fill remark that the usual proofs give no useful indication of how $K$ depends on the chain, and their Open Problem~4.30 asks whether there is some explicit function $\psi(b,s)\to0$ as $s\to\infty$, not depending on the chain, such that for standardized $g$ and continuous-time chains
+\begin{equation}\label{eq:op}
+\sup_x\Bigl|\Pp_\pi\Bigl(\frac{S_t}{\sigma t^{1/2}}\le x\Bigr)-\Pp(Z\le x)\Bigr|\le\psi\bigl(\|g\|_\infty,t/\tau_2\bigr),
+\end{equation}
+where $Z$ is a standard normal random variable. The answer is no.
+
+\begin{theorem}\label{thm:main}
+For every $b\ge1$ and $s\ge2b$ there are an irreducible reversible chain $X$ on four states with $\tau_2=1$ and a standardized function $g$ with $\|g\|_\infty=b$ such that
+\[
+\Pp_\pi(S_s\le0)\ge1-\frac4s .
+\]
+Consequently, for every constant $c>0$,
+\[
+\sup_x\bigl|\Pp_\pi(S_s/c\le x)-\Pp(Z\le x)\bigr|\ge\frac12-\frac4s .
+\]
+\end{theorem}
+
+The second statement follows from the first at $x=0$, since $\Pp(Z\le0)=1/2$. With $c=\sigma s^{1/2}$ it shows that a function $\psi$ for which \eqref{eq:op} holds for all chains satisfies $\psi(b,s)\ge1/2-4/s$ whenever $s\ge2b$, so $\liminf_{s\to\infty}\psi(b,s)\ge1/2$ for every $b\ge1$; a standardized $g$ has $\|g\|_\infty\ge1$, so the values $b<1$ do not arise. The chains have four states, so the answer remains negative if $\psi$ may also depend on the number of states, and with $c=(\var_\pi S_s)^{1/2}$ the theorem shows that normalizing by the exact standard deviation in place of $\sigma s^{1/2}$ does not help. By the scaling in Remark~\ref{rem:scale}, the theorem holds with any prescribed value of $\tau_2$ in place of $1$ and $t=s\tau_2$ in place of $s$.
+
+What is missing is a lower bound for $\sigma^2/\tau_2$. A Berry--Esseen inequality of Lezaud \cite[Theorem~3.1]{Lez01} gives, for the stationary chain,
+\begin{equation}\label{eq:lezaud}
+\sup_x\Bigl|\Pp_\pi\Bigl(\frac{S_t}{\sigma t^{1/2}}\le x\Bigr)-\Pp(Z\le x)\Bigr|\le\frac{26\,\|g\|_\infty\tau_2}{\sigma t^{1/2}}+e^{-t/\tau_2}
+=26\,\|g\|_\infty\Bigl(\frac{\tau_2}{\sigma^2}\Bigr)^{1/2}\Bigl(\frac t{\tau_2}\Bigr)^{-1/2}+e^{-t/\tau_2},
+\end{equation}
+so a bound of the form \eqref{eq:op} holds on any class of chains on which $\sigma^2/\tau_2$ is bounded below. On two states every standardized $g$ is an eigenfunction of $Q$ and $\sigma^2=2\tau_2$, the largest value allowed by Proposition~4.29 of \cite{AF}. In the chains of Theorem~\ref{thm:main}, $\sigma^2$ is of order $s^{-2}$ while $\tau_2=1$ (Remark~\ref{rem:sigma}).
+
+\section{The chains}\label{sec:chains}
+
+Fix $b\ge1$ and $s\ge2b$, and put
+\[
+\varepsilon=s^{-2},\qquad R=s^4,\qquad \alpha=\Bigl(\frac{1-b^2\varepsilon}{1-\varepsilon}\Bigr)^{1/2},\qquad m=\frac{b\varepsilon}{\alpha(1-\varepsilon)} .
+\]
+Let $Y$ be the chain on $\{0,1\}$ that jumps from $0$ to $1$ at rate $\varepsilon$ and from $1$ to $0$ at rate $1-\varepsilon$, and let $V$ be the chain on $\{-1,1\}$, independent of $Y$, that jumps from $1$ to $-1$ at rate $R(1+m)/2$ and from $-1$ to $1$ at rate $R(1-m)/2$. The chain of Theorem~\ref{thm:main} is $X=(Y,V)$ on $I=\{0,1\}\times\{-1,1\}$, and
+\[
+g(y,v)=\alpha(1-y)v+by .
+\]
+Thus $g=\pm\alpha$, with the sign of $V$, while $Y=0$, and $g=b$ while $Y=1$.
+
+\begin{lemma}\label{lem:chain}
+\begin{enumerate}[label=\textup{(\alph*)}]
+\item $3/4\le\alpha^2\le1$ and $b\varepsilon\le m<1/2$.
+\item $X$ is irreducible and reversible, and its stationary distribution is $\pi(y,v)=\pi_Y(y)\pi_V(v)$, where $\pi_Y(0)=1-\varepsilon$, $\pi_Y(1)=\varepsilon$, $\pi_V(1)=(1-m)/2$ and $\pi_V(-1)=(1+m)/2$.
+\item The eigenvalues of $-Q$ are $0$, $1$, $R$ and $R+1$, so $\tau_2=1$.
+\item $g$ is standardized and $\|g\|_\infty=b$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Since $s\ge2b\ge2$, we have $\varepsilon\le1/4$ and $b^2\varepsilon=(b/s)^2\le1/4$. Hence $\alpha^2\ge1-b^2\varepsilon\ge3/4$, and $\alpha^2\le1$ because $b\ge1$. So $\alpha(1-\varepsilon)\le1$, which gives $m\ge b\varepsilon$. Also $b\varepsilon\le1/(2s)\le1/4$ and $\alpha(1-\varepsilon)\ge(\sqrt3/2)(3/4)>3/5$, so $m<5/12$. In particular all the rates are positive.
+
+(b) The chains $Y$ and $V$ are irreducible, and they are reversible with respect to $\pi_Y$ and $\pi_V$, since $(1-\varepsilon)\varepsilon=\varepsilon(1-\varepsilon)$ and $\frac{1-m}2\cdot\frac{R(1+m)}2=\frac{1+m}2\cdot\frac{R(1-m)}2$. A pair of independent irreducible reversible chains is an irreducible chain, reversible with respect to the product of the two stationary distributions.
+
+(c) Put $u(y,v)=y-\varepsilon$ and $w(y,v)=v+m$. A direct computation gives $-Qu=u$ and $-Qw=Rw$; since $u$ depends only on $y$ and $w$ only on $v$, also $-Q(uw)=(R+1)uw$, and $-Q\mathbf 1=0$. The four functions $\mathbf 1,u,w,uw$ are linearly independent, so these are all the eigenvalues, and $\lambda_2=1$ because $R=s^4>1$.
+
+(d) Under $\pi$ the coordinates are independent, $\pi(Y=1)=\varepsilon$ and $\E_\pi V=-m$. So $\pi(g)=-\alpha(1-\varepsilon)m+b\varepsilon=0$ by the choice of $m$, and, since $v^2=1$, $\pi(g^2)=\alpha^2(1-\varepsilon)+b^2\varepsilon=1$ by the choice of $\alpha$. Finally $\|g\|_\infty=\max(\alpha,b)=b$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Run $X$ from $\pi$, so that $Y$ and $V$ are independent stationary chains. Let $H$ be the event that $Y_u=0$ for all $u\in[0,s]$, and put $J=\int_0^sV_u\,du$. On $H$ we have $S_s=\alpha J$ with $\alpha>0$, so
+\begin{equation}\label{eq:split}
+\Pp_\pi(S_s\le0)\ge\Pp_\pi(H\cap\{J\le0\})\ge\Pp_\pi(H)-\Pp_\pi(J>0).
+\end{equation}
+First, $\Pp_\pi(H)=(1-\varepsilon)e^{-\varepsilon s}\ge(1-\varepsilon)(1-\varepsilon s)\ge1-\varepsilon(1+s)$. Second, $\E_\pi J=-ms$, and since $V+m$ is an eigenfunction of the generator of $V$ with eigenvalue $-R$, $\cov_\pi(V_0,V_u)=(1-m^2)e^{-R|u|}$. Hence
+\[
+\var_\pi J=2\int_0^s(s-u)(1-m^2)e^{-Ru}\,du\le\frac{2(1-m^2)s}R ,
+\]
+and Chebyshev's inequality gives
+\[
+\Pp_\pi(J>0)=\Pp_\pi(J-\E_\pi J>ms)\le\frac{\var_\pi J}{(ms)^2}\le\frac{2(1-m^2)}{Rm^2s}.
+\]
+By Lemma~\ref{lem:chain}(a), $m\ge b\varepsilon=bs^{-2}$, so $Rm^2s\ge b^2s\ge s$ and this is at most $2/s$. Since $s\ge2$, also $\varepsilon(1+s)=s^{-1}+s^{-2}\le3/(2s)$. By \eqref{eq:split},
+\[
+\Pp_\pi(S_s\le0)\ge1-\frac3{2s}-\frac2s\ge1-\frac4s .
+\]
+Together with Lemma~\ref{lem:chain} this proves Theorem~\ref{thm:main}. \qed
+
+\section{Remarks}\label{sec:remarks}
+
+\begin{remark}\label{rem:scale}
+For $\kappa>0$ the chain $X^\kappa_t=X_{\kappa t}$ has generator $\kappa Q$, relaxation time $\tau_2/\kappa$ and asymptotic variance rate $\sigma^2/\kappa$, and its integral is $S^\kappa_t=S_{\kappa t}/\kappa$. So $S^\kappa_t/(\sigma_\kappa t^{1/2})=S_{\kappa t}/(\sigma(\kappa t)^{1/2})$ with $\sigma_\kappa^2=\sigma^2/\kappa$, and the two sides of \eqref{eq:op} for $X^\kappa$ at time $t$ coincide with those for $X$ at time $\kappa t$. Any value of $\tau_2$ can therefore be prescribed in Theorem~\ref{thm:main}; equivalently, the rates may be divided by $R$, which gives a chain whose rates are at most $1$, with $\tau_2=R=s^4$ and $t=s^5$.
+\end{remark}
+
+\begin{remark}\label{rem:sigma}
+In the eigenbasis of Lemma~\ref{lem:chain}(c),
+\[
+g=(b+\alpha m)\,u+\alpha(1-\varepsilon)\,w-\alpha\,uw ,
+\]
+the constant term vanishing by the choice of $m$. The functions $u$, $w$ and $uw$ are orthogonal in $L^2(\pi)$, with $\pi(u^2)=\varepsilon(1-\varepsilon)$, $\pi(w^2)=1-m^2$ and $\pi((uw)^2)=\varepsilon(1-\varepsilon)(1-m^2)$, and $\sigma^2=2\sum_k\pi(g_k^2)/\lambda_k$ over the components $g_k$ of $g$ in an orthogonal eigenbasis (see the proof of Proposition~4.29 in \cite{AF}). Hence
+\[
+\sigma^2=2(b+\alpha m)^2\varepsilon(1-\varepsilon)+2\alpha^2(1-m^2)(1-\varepsilon)\Bigl(\frac{1-\varepsilon}R+\frac{\varepsilon}{R+1}\Bigr),
+\]
+and $s^2\sigma^2\to2b^2$ as $s\to\infty$ with $b$ fixed, while $\tau_2=1$. The normalized variable $W_s=S_s/(\sigma s^{1/2})$ tends to $0$ in probability. Indeed, by Chebyshev's inequality and the bound for $\var_\pi J$ in Section~\ref{sec:proof}, $|J-\E_\pi J|\le ms/2$ with probability at least $1-8/s$; on this event intersected with $H$ we have $|S_s|\le\frac32\alpha ms$, and $\alpha ms/(\sigma s^{1/2})=b/((1-\varepsilon)\sigma s^{3/2})$, which tends to $0$ at the rate $s^{-1/2}$. So the distance in \eqref{eq:op} tends to $1/2$ along these chains. On the other hand $\E_\pi W_s^2=\var_\pi S_s/(s\sigma^2)\ge A(s)\to1$ by Proposition~4.29 of \cite{AF}: the variance of $W_s$ is carried by the complement of $H$, an event of probability about $1/s$ on which $|W_s|$ is of order $s^{1/2}$.
+\end{remark}
+
+\begin{remark}
+While $Y=0$, the fast chain $V$ averages $g=\pm\alpha$ to the small negative drift $-\alpha m$, and the rare and comparatively long visits of $Y$ to $1$, where $g=b$, restore the mean $0$. Over a time $s$ the chain $Y$ makes no visit to $1$ with probability $1-O(1/s)$, and then $S_s$ is negative with probability close to $1$. For sums of $n$ independent copies of a standardized random variable bounded by $b$, the classical Berry--Esseen theorem gives a bound $Cbn^{-1/2}$, because the third absolute moment is at most $b$. For a Markov chain the variance that governs $S_t$ is $\sigma^2$, which Proposition~4.29 of \cite{AF} bounds above by $2\tau_2$ but which $\|g\|_\infty$ and $\tau_2$ do not bound below; by \eqref{eq:lezaud}, a lower bound for $\sigma^2/\tau_2$ in terms of $\|g\|_\infty$ would give a function $\psi$ as in \eqref{eq:op}.
+\end{remark}
+
+\section{Computations}\label{sec:checks}
+
+The repository listed under Data availability contains a Python script, \texttt{checks.py}, with its output, and a Lean file, \texttt{Bounds.lean}. With $b$ and $s$ as symbols, the script verifies with SymPy the detailed balance equations, $\pi Q=0$, the eigenfunctions of Lemma~\ref{lem:chain}(c), $\pi(g)=0$ and $\pi(g^2)=1$, the expansion of $g$ in Remark~\ref{rem:sigma}, and the formula for $\sigma^2$ there, the last through the solution $h$ of $-Qh=g$, $\pi(h)=0$, and $\sigma^2=2\pi(gh)$. For $b\in\{1,1.5,2,3,10\}$ and $s\in\{2b,3b,10b,1000b\}$ it checks in $50$-digit arithmetic detailed balance, the eigenfunctions, the spectrum (also with a general eigenvalue routine), the standardization of $g$, $\|g\|_\infty=b$ and the bounds of Lemma~\ref{lem:chain}(a); it computes $\Pp_\pi(H)$ from the exponential of $Q$ restricted to $\{Y=0\}$ and compares it with $(1-\varepsilon)e^{-\varepsilon s}$, checks the bound for $\var_\pi J$ used in Section~\ref{sec:proof} and, for $s\le6$, the formula for $\var_\pi J$ against numerical integration of the covariance of $V$ computed from the matrix exponential, and computes $\sigma^2$ from a linear solve of the Poisson equation and compares it with the formula of Remark~\ref{rem:sigma}; for $b=1$, where $\alpha=1$, it checks $\pi(g)=0$ and $\pi(g^2)=1$ in exact rational arithmetic. It evaluates the bound $1-\varepsilon(1+s)-2(1-m^2)/(Rm^2s)$ of Section~\ref{sec:proof} on a grid of $b$ and $s$ and checks that it is at least $1-4/s$, and at five pairs $(b,s)$ with $s\le8$ it computes $\Pp_\pi(S_s\le0)$ by numerical Fourier inversion of $\E_\pi e^{i\theta S_s}=\pi^{\mathsf T}\exp\bigl(s(Q+i\theta G)\bigr)\mathbf 1$, where $G$ is the diagonal matrix of the values of $g$, and by simulation of the chain. At $b=2$ and $s=8$, for example, the inversion gives $0.8844$, the simulation $0.8894$ with standard error $0.0044$, and the bound of Section~\ref{sec:proof} $0.8018$. The Lean file, checked with Lean~4 \cite{MU21} (version 4.33.1) and Mathlib \cite{Mathlib20}, proves from the defining relations of $\varepsilon$, $\alpha$ and $m$ the inequalities of Lemma~\ref{lem:chain}(a), and it proves $(1-\varepsilon)e^{-\varepsilon s}\ge1-\varepsilon(1+s)$ and $\varepsilon(1+s)+2(1-m^2)/(Rm^2s)\le4/s$ for $m\ge b\varepsilon$, which is the real-variable part of the proof. These computations test the identities and inequalities used in the proofs; they are not part of them.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. Open Problem~4.30 of \cite{AF} was among the open problems in probability on which the project's agents worked in September 2026. On 6 September 2026 an agent running in OpenAI's Codex found a family of four-state chains with $\|g\|_\infty=2$ along which $S_t/(\sigma t^{1/2})$ tends to $0$ in probability as $t/\tau_2\to\infty$, which answers the question in the negative. On 10 October 2026 a second Codex agent gave a rational parametrization of these chains and showed that the distance in \eqref{eq:op} tends to $1/2$ along them. On 13 October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, found the chains of Theorem~\ref{thm:main}, which cover every value of $\|g\|_\infty$, proved the explicit bound, searched the literature, and wrote the remarks, the computer checks, the Lean file and the manuscript. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/relaxation-time-normal-approximation}.
+
+\begin{thebibliography}{9}
+
+\bibitem{AF}
+D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled version 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.pdf}.
+
+\bibitem{Lez01}
+P.~Lezaud, Chernoff and Berry--Ess\'een inequalities for Markov processes, \emph{ESAIM Probab. Statist.} \textbf{5} (2001), 183--201.
+
+\bibitem{MU21}
+L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
+
+\bibitem{Mathlib20}
+The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, 367--381.
+
+\end{thebibliography}
+\end{document}

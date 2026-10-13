@@ -1,0 +1,6 @@
+Output of `lake env lean Bounds.lean` (Lean 4.33.1, Mathlib 0df444a360eaa60ab8c11dca51a86af692955474),
+13 October 2026, followed by its exit status.
+'params' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'final' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit 0

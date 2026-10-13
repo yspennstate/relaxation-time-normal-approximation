@@ -1,0 +1,357 @@
+Part S: algebra, symbolic
+PASS S1 detailed balance (symbolic b, s)
+PASS S2 pi Q = 0 and pi sums to 1
+PASS S3 -Q u = u, -Q w = R w, -Q uw = (R+1) uw (spectrum 0, 1, R, R+1)
+PASS S4 pi(g) = 0 and pi(g^2) = 1
+PASS S5 g = (b + alpha m) u + alpha (1 - eps) w - alpha u w
+PASS S6 h solves -Q h = g with pi(h) = 0, and 2 pi(g h) is the closed form of sigma^2
+PASS S7 alpha m (1 - eps) = b eps and alpha^2 (1 - eps) + b^2 eps = 1
+Part A: algebra, 50 digits
+PASS A9 exact rational b=1 s=2: pi(g)=0, pi(g^2)=1, max|g|=1
+PASS A9 exact rational b=1 s=3: pi(g)=0, pi(g^2)=1, max|g|=1
+PASS A9 exact rational b=1 s=7: pi(g)=0, pi(g^2)=1, max|g|=1
+PASS A9 exact rational b=1 s=50: pi(g)=0, pi(g^2)=1, max|g|=1
+PASS A1 rows of Q sum to 0, b=1 s=2
+PASS A2 detailed balance, b=1 s=2
+PASS A3 pi sums to 1, b=1 s=2
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1 s=2
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1 s=2  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1 s=2
+PASS A7 max|g| = b, b=1 s=2
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1 s=2  alpha=1.0 m=0.33333333 b*eps=0.25
+Part B, b=1 s=2
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1 s=2  P(H)=0.454897994784475
+PASS B2 P(H^c) <= eps (1 + s), b=1 s=2
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1 s=2
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=1 s=2  var=0.215277777778
+PASS B5 sigma^2: Poisson equation = closed form, b=1 s=2  sigma^2=0.748774509804 s^2 sigma^2=2.99509803922
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1 s=2
+PASS A1 rows of Q sum to 0, b=1 s=3
+PASS A2 detailed balance, b=1 s=3
+PASS A3 pi sums to 1, b=1 s=3
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1 s=3
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1 s=3  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1 s=3
+PASS A7 max|g| = b, b=1 s=3
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1 s=3  alpha=1.0 m=0.125 b*eps=0.11111111
+Part B, b=1 s=3
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1 s=3  P(H)=0.636916720510035
+PASS B2 P(H^c) <= eps (1 + s), b=1 s=3
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1 s=3
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=1 s=3  var=0.0726165980796
+PASS B5 sigma^2: Poisson equation = closed form, b=1 s=3  sigma^2=0.271575663287 s^2 sigma^2=2.44418096959
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1 s=3
+PASS A1 rows of Q sum to 0, b=1 s=10
+PASS A2 detailed balance, b=1 s=10
+PASS A3 pi sums to 1, b=1 s=10
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1 s=10
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1 s=10  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1 s=10
+PASS A7 max|g| = b, b=1 s=10
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1 s=10  alpha=1.0 m=0.01010101 b*eps=0.01
+Part B, b=1 s=10
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1 s=10  P(H)=0.8957890438556
+PASS B2 P(H^c) <= eps (1 + s), b=1 s=10
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1 s=10
+PASS B5 sigma^2: Poisson equation = closed form, b=1 s=10  sigma^2=0.020399999802 s^2 sigma^2=2.0399999802
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1 s=10
+PASS A1 rows of Q sum to 0, b=1 s=1000
+PASS A2 detailed balance, b=1 s=1000
+PASS A3 pi sums to 1, b=1 s=1000
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1 s=1000
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1 s=1000  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1 s=1000
+PASS A7 max|g| = b, b=1 s=1000
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1 s=1000  alpha=1.0 m=1.000001e-6 b*eps=1.0e-6
+Part B, b=1 s=1000
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1 s=1000  P(H)=0.998999500832875
+PASS B2 P(H^c) <= eps (1 + s), b=1 s=1000
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1 s=1000
+PASS B5 sigma^2: Poisson equation = closed form, b=1 s=1000  sigma^2=2.000004e-6 s^2 sigma^2=2.000004
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1 s=1000
+PASS A1 rows of Q sum to 0, b=1.5 s=3.0
+PASS A2 detailed balance, b=1.5 s=3.0
+PASS A3 pi sums to 1, b=1.5 s=3.0
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1.5 s=3.0
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1.5 s=3.0  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1.5 s=3.0
+PASS A7 max|g| = b, b=1.5 s=3.0
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1.5 s=3.0  alpha=0.91855865 m=0.20412415 b*eps=0.16666667
+Part B, b=1.5 s=3.0
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1.5 s=3.0  P(H)=0.636916720510035
+PASS B2 P(H^c) <= eps (1 + s), b=1.5 s=3.0
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1.5 s=3.0
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=1.5 s=3.0  var=0.0706955240563
+PASS B5 sigma^2: Poisson equation = closed form, b=1.5 s=3.0  sigma^2=0.580222866272 s^2 sigma^2=5.22200579645
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1.5 s=3.0
+PASS A1 rows of Q sum to 0, b=1.5 s=4.5
+PASS A2 detailed balance, b=1.5 s=4.5
+PASS A3 pi sums to 1, b=1.5 s=4.5
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1.5 s=4.5
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1.5 s=4.5  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1.5 s=4.5
+PASS A7 max|g| = b, b=1.5 s=4.5
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1.5 s=4.5  alpha=0.96698756 m=0.080582296 b*eps=0.074074074
+Part B, b=1.5 s=4.5
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1.5 s=4.5  P(H)=0.761194815118447
+PASS B2 P(H^c) <= eps (1 + s), b=1.5 s=4.5
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1.5 s=4.5
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=1.5 s=4.5  var=0.0217935383194
+PASS B5 sigma^2: Poisson equation = closed form, b=1.5 s=4.5  sigma^2=0.238072946965 s^2 sigma^2=4.82097717603
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1.5 s=4.5
+PASS A1 rows of Q sum to 0, b=1.5 s=15.0
+PASS A2 detailed balance, b=1.5 s=15.0
+PASS A3 pi sums to 1, b=1.5 s=15.0
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1.5 s=15.0
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1.5 s=15.0  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1.5 s=15.0
+PASS A7 max|g| = b, b=1.5 s=15.0
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1.5 s=15.0  alpha=0.99720592 m=0.0067151914 b*eps=0.0066666667
+Part B, b=1.5 s=15.0
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1.5 s=15.0  P(H)=0.931349176209255
+PASS B2 P(H^c) <= eps (1 + s), b=1.5 s=15.0
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1.5 s=15.0
+PASS B5 sigma^2: Poisson equation = closed form, b=1.5 s=15.0  sigma^2=0.0201283950583 s^2 sigma^2=4.52888888812
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1.5 s=15.0
+PASS A1 rows of Q sum to 0, b=1.5 s=1500.0
+PASS A2 detailed balance, b=1.5 s=1500.0
+PASS A3 pi sums to 1, b=1.5 s=1500.0
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=1.5 s=1500.0
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=1.5 s=1500.0  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=1.5 s=1500.0
+PASS A7 max|g| = b, b=1.5 s=1500.0
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=1.5 s=1500.0  alpha=0.99999972 m=6.6666715e-7 b*eps=6.6666667e-7
+Part B, b=1.5 s=1500.0
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=1.5 s=1500.0  P(H)=0.999333111357934
+PASS B2 P(H^c) <= eps (1 + s), b=1.5 s=1500.0
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=1.5 s=1500.0
+PASS B5 sigma^2: Poisson equation = closed form, b=1.5 s=1500.0  sigma^2=2.00000128395e-6 s^2 sigma^2=4.50000288889
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=1.5 s=1500.0
+PASS A1 rows of Q sum to 0, b=2 s=4
+PASS A2 detailed balance, b=2 s=4
+PASS A3 pi sums to 1, b=2 s=4
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=2 s=4
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=2 s=4  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=2 s=4
+PASS A7 max|g| = b, b=2 s=4
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=2 s=4  alpha=0.89442719 m=0.1490712 b*eps=0.125
+Part B, b=2 s=4
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=2 s=4  P(H)=0.730125734129442
+PASS B2 P(H^c) <= eps (1 + s), b=2 s=4
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=2 s=4
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=2 s=4  var=0.0305257161458
+PASS B5 sigma^2: Poisson equation = closed form, b=2 s=4  sigma^2=0.53906110672 s^2 sigma^2=8.62497770752
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=2 s=4
+PASS A1 rows of Q sum to 0, b=2 s=6
+PASS A2 detailed balance, b=2 s=6
+PASS A3 pi sums to 1, b=2 s=6
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=2 s=6
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=2 s=6  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=2 s=6
+PASS A7 max|g| = b, b=2 s=6
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=2 s=6  alpha=0.95618289 m=0.05976143 b*eps=0.055555556
+Part B, b=2 s=6
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=2 s=6  P(H)=0.822968343643653
+PASS B2 P(H^c) <= eps (1 + s), b=2 s=6
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=2 s=6
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=2 s=6  var=0.0092250039805
+PASS B5 sigma^2: Poisson equation = closed form, b=2 s=6  sigma^2=0.229938242331 s^2 sigma^2=8.27777672393
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=2 s=6
+PASS A1 rows of Q sum to 0, b=2 s=20
+PASS A2 detailed balance, b=2 s=20
+PASS A3 pi sums to 1, b=2 s=20
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=2 s=20
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=2 s=20  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=2 s=20
+PASS A7 max|g| = b, b=2 s=20
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=2 s=20  alpha=0.99623351 m=0.0050314824 b*eps=0.005
+Part B, b=2 s=20
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=2 s=20  P(H)=0.948851350939462
+PASS B2 P(H^c) <= eps (1 + s), b=2 s=20
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=2 s=20
+PASS B5 sigma^2: Poisson equation = closed form, b=2 s=20  sigma^2=0.0200624999998 s^2 sigma^2=8.02499999992
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=2 s=20
+PASS A1 rows of Q sum to 0, b=2 s=2000
+PASS A2 detailed balance, b=2 s=2000
+PASS A3 pi sums to 1, b=2 s=2000
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=2 s=2000
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=2 s=2000  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=2 s=2000
+PASS A7 max|g| = b, b=2 s=2000
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=2 s=2000  alpha=0.99999962 m=5.0000031e-7 b*eps=5.0e-7
+Part B, b=2 s=2000
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=2 s=2000  P(H)=0.999499875104138
+PASS B2 P(H^c) <= eps (1 + s), b=2 s=2000
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=2 s=2000
+PASS B5 sigma^2: Poisson equation = closed form, b=2 s=2000  sigma^2=2.000000625e-6 s^2 sigma^2=8.0000025
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=2 s=2000
+PASS A1 rows of Q sum to 0, b=3 s=6
+PASS A2 detailed balance, b=3 s=6
+PASS A3 pi sums to 1, b=3 s=6
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=3 s=6
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=3 s=6  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=3 s=6
+PASS A7 max|g| = b, b=3 s=6
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=3 s=6  alpha=0.87831007 m=0.097590007 b*eps=0.083333333
+Part B, b=3 s=6
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=3 s=6  P(H)=0.822968343643653
+PASS B2 P(H^c) <= eps (1 + s), b=3 s=6
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=3 s=6
+PASS B4 var of int_0^s V du: closed form = quadrature of the matrix covariance, b=3 s=6  var=0.00916989642984
+PASS B5 sigma^2: Poisson equation = closed form, b=3 s=6  sigma^2=0.515432074213 s^2 sigma^2=18.5555546717
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=3 s=6
+PASS A1 rows of Q sum to 0, b=3 s=9
+PASS A2 detailed balance, b=3 s=9
+PASS A3 pi sums to 1, b=3 s=9
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=3 s=9
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=3 s=9  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=3 s=9
+PASS A7 max|g| = b, b=3 s=9
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=3 s=9  alpha=0.9486833 m=0.039528471 b*eps=0.037037037
+Part B, b=3 s=9
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=3 s=9  P(H)=0.883791917841353
+PASS B2 P(H^c) <= eps (1 + s), b=3 s=9
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=3 s=9
+PASS B5 sigma^2: Poisson equation = closed form, b=3 s=9  sigma^2=0.225270537519 s^2 sigma^2=18.246913539
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=3 s=9
+PASS A1 rows of Q sum to 0, b=3 s=30
+PASS A2 detailed balance, b=3 s=30
+PASS A3 pi sums to 1, b=3 s=30
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=3 s=30
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=3 s=30  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=3 s=30
+PASS A7 max|g| = b, b=3 s=30
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=3 s=30  alpha=0.99554067 m=0.0033519888 b*eps=0.0033333333
+Part B, b=3 s=30
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=3 s=30  P(H)=0.966141415925915
+PASS B2 P(H^c) <= eps (1 + s), b=3 s=30
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=3 s=30
+PASS B5 sigma^2: Poisson equation = closed form, b=3 s=30  sigma^2=0.020024691358 s^2 sigma^2=18.0222222222
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=3 s=30
+PASS A1 rows of Q sum to 0, b=3 s=3000
+PASS A2 detailed balance, b=3 s=3000
+PASS A3 pi sums to 1, b=3 s=3000
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=3 s=3000
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=3 s=3000  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=3 s=3000
+PASS A7 max|g| = b, b=3 s=3000
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=3 s=3000  alpha=0.99999956 m=3.3333352e-7 b*eps=3.3333333e-7
+Part B, b=3 s=3000
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=3 s=3000  P(H)=0.99966661114197
+PASS B2 P(H^c) <= eps (1 + s), b=3 s=3000
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=3 s=3000
+PASS B5 sigma^2: Poisson equation = closed form, b=3 s=3000  sigma^2=2.00000024691e-6 s^2 sigma^2=18.0000022222
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=3 s=3000
+PASS A1 rows of Q sum to 0, b=10 s=20
+PASS A2 detailed balance, b=10 s=20
+PASS A3 pi sums to 1, b=10 s=20
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=10 s=20
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=10 s=20  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=10 s=20
+PASS A7 max|g| = b, b=10 s=20
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=10 s=20  alpha=0.86710997 m=0.028903666 b*eps=0.025
+Part B, b=10 s=20
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=10 s=20  P(H)=0.948851350939462
+PASS B2 P(H^c) <= eps (1 + s), b=10 s=20
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=10 s=20
+PASS B5 sigma^2: Poisson equation = closed form, b=10 s=20  sigma^2=0.5012625 s^2 sigma^2=200.505
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=10 s=20
+PASS A1 rows of Q sum to 0, b=10 s=30
+PASS A2 detailed balance, b=10 s=30
+PASS A3 pi sums to 1, b=10 s=30
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=10 s=30
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=10 s=30  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=10 s=30
+PASS A7 max|g| = b, b=10 s=30
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=10 s=30  alpha=0.94333326 m=0.011791666 b*eps=0.011111111
+Part B, b=10 s=30
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=10 s=30  P(H)=0.966141415925915
+PASS B2 P(H^c) <= eps (1 + s), b=10 s=30
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=10 s=30
+PASS B5 sigma^2: Poisson equation = closed form, b=10 s=30  sigma^2=0.222471604938 s^2 sigma^2=200.224444444
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=10 s=30
+PASS A1 rows of Q sum to 0, b=10 s=100
+PASS A2 detailed balance, b=10 s=100
+PASS A3 pi sums to 1, b=10 s=100
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=10 s=100
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=10 s=100  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=10 s=100
+PASS A7 max|g| = b, b=10 s=100
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=10 s=100  alpha=0.99503719 m=0.0010050881 b*eps=0.001
+Part B, b=10 s=100
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=10 s=100  P(H)=0.989950828765793
+PASS B2 P(H^c) <= eps (1 + s), b=10 s=100
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=10 s=100
+PASS B5 sigma^2: Poisson equation = closed form, b=10 s=100  sigma^2=0.02000202 s^2 sigma^2=200.0202
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=10 s=100
+PASS A1 rows of Q sum to 0, b=10 s=10000
+PASS A2 detailed balance, b=10 s=10000
+PASS A3 pi sums to 1, b=10 s=10000
+PASS A4 -Q has eigenvalues 0, 1, R, R+1 (eigenfunctions), b=10 s=10000
+PASS A5 spectrum by mp.eig = [0, 1, R, R+1], b=10 s=10000  lambda_2=1.0
+PASS A6 pi(g) = 0 and pi(g^2) = 1, b=10 s=10000
+PASS A7 max|g| = b, b=10 s=10000
+PASS A8 3/4 <= alpha^2 <= 1 and b eps <= m < 1/2 (here m < 0.39), b=10 s=10000  alpha=0.9999995 m=1.0000005e-7 b*eps=1.0e-7
+Part B, b=10 s=10000
+PASS B1 P(H) = (1-eps) e^{-eps s} (sub-generator exponential), b=10 s=10000  P(H)=0.999899995000833
+PASS B2 P(H^c) <= eps (1 + s), b=10 s=10000
+PASS B3 var of int_0^s V du <= 2 (1 - m^2) s / R, b=10 s=10000
+PASS B5 sigma^2: Poisson equation = closed form, b=10 s=10000  sigma^2=2.0000000202e-6 s^2 sigma^2=200.00000202
+PASS B6 b^2 eps <= sigma^2 <= 2 (b+1)^2 eps, b=10 s=10000
+Part C: the bound of the proof
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=2  bound=-0.25 1-4/s=-1.0
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=2.5  bound=-0.104 1-4/s=-0.6
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=3  bound=0.03703703704 1-4/s=-0.3333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=10  bound=0.694 1-4/s=0.6
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=100  bound=0.969904 1-4/s=0.96
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1 s=1000  bound=0.996999004 1-4/s=0.996
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=3.0  bound=0.366255144 1-4/s=-0.3333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=3.5  bound=0.4460641399 1-4/s=-0.1428571429
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=4.5  bound=0.5625666819 1-4/s=0.1111111111
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=15.0  bound=0.8704855967 1-4/s=0.7333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=150.0  bound=0.9873638189 1-4/s=0.9733333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=1.5 s=1500.0  bound=0.9987402972 1-4/s=0.9973333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=4  bound=0.6015625 1-4/s=0.0
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=4.5  bound=0.6447187929 1-4/s=0.1111111111
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=6  bound=0.7337962963 1-4/s=0.3333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=20  bound=0.9228125 1-4/s=0.8
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=200  bound=0.9924753125 1-4/s=0.98
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=2 s=2000  bound=0.9992497503 1-4/s=0.998
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=6  bound=0.7788065844 1-4/s=0.3333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=6.5  bound=0.7963890153 1-4/s=0.3846153846
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=9  bound=0.8549001677 1-4/s=0.5555555556
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=30  bound=0.9582304527 1-4/s=0.8666666667
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=300  bound=0.9959148971 1-4/s=0.9866666667
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=3 s=3000  bound=0.9995924816 1-4/s=0.9986666667
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=10  bound=0.88408 1-4/s=0.6
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=10.5  bound=0.8898693446 1-4/s=0.619047619
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=15  bound=0.9241718519 1-4/s=0.7333333333
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=50  bound=0.97801664 1-4/s=0.92
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=500  bound=0.9978360166 1-4/s=0.992
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=5 s=5000  bound=0.99978396 1-4/s=0.9992
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=20  bound=0.9467525 1-4/s=0.8
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=20.5  bound=0.9480988378 1-4/s=0.8048780488
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=30  bound=0.9649637037 1-4/s=0.8666666667
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=100  bound=0.98970202 1-4/s=0.96
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=1000  bound=0.998979002 1-4/s=0.996
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=10 s=10000  bound=0.99989799 1-4/s=0.9996
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=200  bound=0.99497425 1-4/s=0.98
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=200.5  bound=0.994986844 1-4/s=0.9800498753
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=300  bound=0.996654963 1-4/s=0.9866666667
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=1000  bound=0.998998802 1-4/s=0.996
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=10000  bound=0.99989997 1-4/s=0.9996
+PASS C1 1 - eps(1+s) - 2(1-m^2)/(R m^2 s) >= 1 - 4/s, b=100 s=100000  bound=0.9999899979 1-4/s=0.99996
+     smallest margin over the grid: 2.99979e-5
+Part D: P(S_s <= 0) by Fourier inversion and by simulation
+PASS D1 P(S_s <= 0) >= proof bound >= 1 - 4/s (Fourier), b=1 s=4  Fourier=0.73945 bound=0.25000 1-4/s=0.000
+PASS D2 simulation agrees with Fourier within 4 standard errors, b=1 s=4  simulated=0.7443 (n=20000, se=0.0031)
+PASS D1 P(S_s <= 0) >= proof bound >= 1 - 4/s (Fourier), b=2 s=4  Fourier=0.78815 bound=0.60156 1-4/s=0.000
+PASS D2 simulation agrees with Fourier within 4 standard errors, b=2 s=4  simulated=0.7852 (n=20000, se=0.0029)
+PASS D1 P(S_s <= 0) >= proof bound >= 1 - 4/s (Fourier), b=1 s=6  Fourier=0.81929 bound=0.49074 1-4/s=0.333
+PASS D2 simulation agrees with Fourier within 4 standard errors, b=1 s=6  simulated=0.8199 (n=10000, se=0.0038)
+PASS D1 P(S_s <= 0) >= proof bound >= 1 - 4/s (Fourier), b=3 s=6  Fourier=0.85047 bound=0.77881 1-4/s=0.333
+PASS D2 simulation agrees with Fourier within 4 standard errors, b=3 s=6  simulated=0.8524 (n=10000, se=0.0035)
+PASS D1 P(S_s <= 0) >= proof bound >= 1 - 4/s (Fourier), b=2 s=8  Fourier=0.88439 bound=0.80176 1-4/s=0.500
+PASS D2 simulation agrees with Fourier within 4 standard errors, b=2 s=8  simulated=0.8894 (n=5000, se=0.0044)
+
+330 checks, 0 failures
