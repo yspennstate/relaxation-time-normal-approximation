@@ -61,7 +61,7 @@ Consequently, for every constant $c>0$,
 
 The second statement follows from the first at $x=0$, since $\Pp(Z\le0)=1/2$. With $c=\sigma s^{1/2}$ it shows that a function $\psi$ for which \eqref{eq:op} holds for all chains satisfies $\psi(b,s)\ge1/2-4/s$ whenever $s\ge2b$, so $\liminf_{s\to\infty}\psi(b,s)\ge1/2$ for every $b\ge1$; a standardized $g$ has $\|g\|_\infty\ge1$, so the values $b<1$ do not arise. The chains have four states, so the answer remains negative if $\psi$ may also depend on the number of states, and with $c=(\var_\pi S_s)^{1/2}$ the theorem shows that normalizing by the exact standard deviation in place of $\sigma s^{1/2}$ does not help. By the scaling in Remark~\ref{rem:scale}, the theorem holds with any prescribed value of $\tau_2$ in place of $1$ and $t=s\tau_2$ in place of $s$.
 
-What is missing is a lower bound for $\sigma^2/\tau_2$. A Berry--Esseen inequality of Lezaud \cite[Theorem~3.1]{Lez01} gives, for the stationary chain,
+What is missing is a lower bound for $\sigma^2/\tau_2$. The central limit theorem for additive functionals of reversible Markov processes is due in this generality to Kipnis and Varadhan~\cite{KV86}, and Berry--Esseen bounds for functionals of Markov chains go back to Bolthausen~\cite{Bol80}. A Berry--Esseen inequality of Lezaud \cite[Theorem~3.1]{Lez01} gives, for the stationary chain,
 \begin{equation}\label{eq:lezaud}
 \sup_x\Bigl|\Pp_\pi\Bigl(\frac{S_t}{\sigma t^{1/2}}\le x\Bigr)-\Pp(Z\le x)\Bigr|\le\frac{26\,\|g\|_\infty\tau_2}{\sigma t^{1/2}}+e^{-t/\tau_2}
 =26\,\|g\|_\infty\Bigl(\frac{\tau_2}{\sigma^2}\Bigr)^{1/2}\Bigl(\frac t{\tau_2}\Bigr)^{-1/2}+e^{-t/\tau_2},
@@ -175,6 +175,12 @@ The paper is part of the Math Brain project, whose public repository is \url{htt
 
 \bibitem{AF}
 D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled version 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.pdf}.
+
+\bibitem{Bol80}
+E.~Bolthausen, The Berry--Esseen theorem for functionals of discrete Markov chains, \emph{Z. Wahrsch. Verw. Gebiete} \textbf{54} (1980), 59--73.
+
+\bibitem{KV86}
+C.~Kipnis and S.~R.~S.~Varadhan, Central limit theorem for additive functionals of reversible Markov processes and applications to simple exclusions, \emph{Comm. Math. Phys.} \textbf{104} (1986), 1--19.
 
 \bibitem{Lez01}
 P.~Lezaud, Chernoff and Berry--Ess\'een inequalities for Markov processes, \emph{ESAIM Probab. Statist.} \textbf{5} (2001), 183--201.
